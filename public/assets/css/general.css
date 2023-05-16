@@ -1,0 +1,231 @@
+:root {
+    /* colors */
+    --bg-color-primary: #eeeeee;
+    --bg-color-secondary: #ffffff;
+    --text-color-primary: #000000;
+    --text-color-secondary: #333333;
+    --wac-color: #f92b15;
+
+    /* fonts */
+    --font-family-primary: sans-serif;
+    --font-size-14: 14px;
+    --font-size-16: 16px;
+    --font-size-18: 18px;
+    --font-size-20: 20px;
+    --font-weight-400: 400;
+    --font-weight-500: 500;
+    --font-weight-600: 600;
+    --font-weight-700: 700;
+    --font-weight-800: 800;
+    --font-weight-900: 900;
+
+    /* shadows */
+    --shadow-01: 0px 0px 30px 20px rgb(0 0 0 / 100%);
+    --shadow-02: 0px 0px 30px 20px rgb(0 0 0 / 50%);
+}
+
+/* selection colors */
+::-moz-selection {
+    background: var(--wac-color);
+    color: #ffffff;
+}
+
+::selection {
+    background: var(--wac-color);
+    color: #ffffff;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--bg-color-secondary);
+}
+
+body, input, textarea, select, button {
+    font-family: var(--font-family-primary);
+    font-size: var(--font-size-16);
+    color: var(--text-color-secondary);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-size: var(--font-size-20);
+    color: var(--text-color-primary);
+}
+
+a {
+    color: var(--text-color-secondary);
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+button {
+    outline: none;
+    border: 0;
+    cursor: pointer;
+}
+
+header, main, footer {
+    max-width: 1000px;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Header */
+header {
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#logo {
+    color: var(--wac-color);
+}
+
+#logo span {
+    color: var(--text-color-primary);
+}
+
+#links {
+    display: flex;
+}
+
+#links li {
+    margin-left: 1rem;
+}
+
+#links li a:hover {
+    color: var(--text-color-primary);
+}
+
+/* Main */
+main {
+    min-height: 100vh;
+    padding-top: 7rem;
+    padding-bottom: 7rem;
+}
+
+#hashtag {
+    color: #1d79d5;
+}
+
+main h2 {
+    font-weight: var(--font-weight-900);
+    font-size: 60px;
+}
+
+main p {
+    margin: 1rem 0px 1rem 0px;
+    color: #606060;
+    line-height: 25px;
+    font-size: var(--font-size-14);
+}
+
+#btns {
+    display: flex;
+    margin-top: 2rem;
+}
+
+#btns button {
+    padding: 12px 25px;
+    width: 150px;
+    font-size: var(--font-size-14);
+    font-weight: var(--font-weight-600);
+    border: 1px solid var(--wac-color);
+    transition: all 0.3s;
+}
+
+#docs {
+    background: var(--wac-color);
+    color: #ffffff;
+    margin-right: 2rem;
+}
+
+#github {
+    background: #ffffff;
+    color: var(--wac-color);
+}
+
+#btns button:hover {
+    transform: translate(3px, -5px);
+}
+
+/* Footer */
+footer {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+
+#by, #by a {
+    color: #606060;
+    font-size: var(--font-size-14);
+}
+
+#by span {
+    color: #f92b15;
+}
+
+#by a {
+    text-decoration: underline;
+}
+
+#by a:hover {
+    color: var(--text-color-primary);
+}
+
+#social {
+    display: flex;
+}
+
+#social li {
+    margin-left: 1rem;
+}
+
+#social li svg {
+    width: 20px;
+    height: 20px;
+    fill: #606060;
+}
+
+#social li svg:hover {
+    fill: var(--text-color-primary);
+}
+
+/* Media Sizes */
+@media only screen and (max-width: 768px) {
+    main {
+        padding-top: 5rem;
+        padding-bottom: 5rem;
+    }
+    
+    main h2 {
+        font-size: 50px;
+    }
+
+    #btns button {
+        width: 100px;
+    }
+}
+
+@media only screen and (max-width: 560px) {
+    main {
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+    }
+}
