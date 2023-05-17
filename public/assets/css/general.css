@@ -75,12 +75,21 @@ button {
     cursor: pointer;
 }
 
-header, main, footer {
+header, section, footer {
+    width: 100%;
     max-width: 1000px;
     padding-left: 1rem;
     padding-right: 1rem;
     margin-left: auto;
     margin-right: auto;
+}
+
+/* Main */
+main {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 /* Header */
@@ -111,9 +120,8 @@ header {
     color: var(--text-color-primary);
 }
 
-/* Main */
-main {
-    min-height: 90vh;
+/* Section */
+section {
     padding-top: 7rem;
     padding-bottom: 7rem;
 }
@@ -122,12 +130,12 @@ main {
     color: #1d79d5;
 }
 
-main h2 {
+section h2 {
     font-weight: var(--font-weight-900);
     font-size: 60px;
 }
 
-main p {
+section p {
     margin: 1rem 0px 1rem 0px;
     color: #606060;
     line-height: 25px;
@@ -209,12 +217,12 @@ footer {
 
 /* Media Sizes */
 @media only screen and (max-width: 768px) {
-    main {
+    section {
         padding-top: 5rem;
         padding-bottom: 5rem;
     }
     
-    main h2 {
+    section h2 {
         font-size: 50px;
     }
 
@@ -224,7 +232,7 @@ footer {
 }
 
 @media only screen and (max-width: 560px) {
-    main {
+    section {
         padding-top: 3rem;
         padding-bottom: 3rem;
     }
