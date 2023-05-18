@@ -2,6 +2,7 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Api\{ApitokenController,ClubController,PlayerController,ChampionshipController};
 
 /*
 |--------------------------------------------------------------------------
@@ -19,4 +20,18 @@ Route::get('/v1/ar/{apitoken}/test', function() {
         'status'   =>   true,
         'result'   =>   date('Y-m-d H:i:s')
     ]);
+});
+
+
+Route::post('/apitoken/new', [ApitokenController::class, 'GenerateNewToken']);
+
+
+Route::prefix('/v1/{lang}/{token}')->group(function () {
+    Route::get('/clubs/wac', [ClubController::class, 'ClubInformation']);
+
+    Route::get('/players',      [PlayerController::class, 'ShowAllPlayers']);
+    Route::get('/players/{id}', [PlayerController::class,  'ShowOnePlayer']);
+    
+    Route::get('/championships',      [ChampionshipController::class, 'ShowAllChampionships']);
+    Route::get('/championships/{id}', [ChampionshipController::class,  'ShowOneChampionship']);
 });
