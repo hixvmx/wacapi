@@ -1,0 +1,24 @@
+section {
+    padding-top: 7rem;
+    padding-bottom: 7rem;
+}
+
+
+
+
+
+
+/* Media Sizes */
+@media only screen and (max-width: 768px) {
+    section {
+        padding-top: 5rem;
+        padding-bottom: 5rem;
+    }
+}
+
+@media only screen and (max-width: 560px) {
+    section {
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+    }
+}

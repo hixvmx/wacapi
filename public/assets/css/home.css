@@ -1,0 +1,70 @@
+section {
+    padding-top: 7rem;
+    padding-bottom: 7rem;
+}
+
+#hashtag {
+    color: #1d79d5;
+}
+
+section h2 {
+    font-weight: var(--font-weight-900);
+    font-size: 60px;
+}
+
+section p {
+    margin: 1rem 0px 1rem 0px;
+    color: #606060;
+    line-height: 25px;
+    font-size: var(--font-size-14);
+}
+
+#btns {
+    display: flex;
+    margin-top: 2rem;
+}
+
+#btns button {
+    padding: 12px 25px;
+    width: 150px;
+    font-size: var(--font-size-14);
+    font-weight: var(--font-weight-600);
+    border: 1px solid var(--wac-color);
+    transition: all 0.3s;
+}
+
+#docs {
+    background: var(--wac-color);
+    color: #ffffff;
+    margin-right: 2rem;
+}
+
+#github {
+    background: #ffffff;
+    color: var(--wac-color);
+}
+
+#btns button:hover {
+    transform: translate(3px, -5px);
+}
+
+
+
+/* Media Sizes */
+@media only screen and (max-width: 768px) {
+    section {
+        padding-top: 5rem;
+        padding-bottom: 5rem;
+    }
+    
+    section h2 {
+        font-size: 50px;
+    }
+}
+
+@media only screen and (max-width: 560px) {
+    section {
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+    }
+}
