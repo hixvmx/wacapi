@@ -22,6 +22,10 @@ class ApitokenController extends Controller
             "token" => $value
         ]);
 
-        return $this->SuccessMssgWithData('new token was created successfully.', 'token', $value);
+        $lang = $this->locale();
+
+        $mssg = $lang == 'ar' ? 'تم إنشاء رمز جديد بنجاح.' : 'new token was created successfully.';
+
+        return $this->SuccessMssgWithData($mssg, 'token', $value);
     }
 }
