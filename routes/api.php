@@ -12,7 +12,7 @@ use App\Http\Controllers\Api\{
 
 
 
-Route::post('/apitoken/new/', [ApitokenController::class, 'GenerateNewToken']);
+Route::post('/v1/{lang}/apitoken/new/', [ApitokenController::class, 'GenerateNewToken'])->middleware('ChangeLang');
 
 
 Route::prefix('/v1/{lang}/{token}')->group(function () {
