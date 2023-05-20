@@ -6,6 +6,20 @@
         <link rel="shortcut icon" href="{{ asset('assets/images/favicon.jpg') }}" type="image/x-icon"/>
         <link rel="stylesheet" href="{{ asset('assets/css/general.css') }}"/>
         @yield('metatags')
+        <meta name="title" content="Wydad Athletic Club API." />
+        <meta name="description" content="" />
+        <!-- Open Graph / Facebook -->
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://wacapi.hixvm.com/" />
+        <meta property="og:title" content="Wydad Athletic Club API." />
+        <meta property="og:description" content="" />
+        <meta property="og:image" content="{{ asset('assets/images/screen-shot.jpg') }}" />
+        <!-- Twitter -->
+        <meta property="twitter:card" content="summary_large_image" />
+        <meta property="twitter:url" content="https://wacapi.hixvm.com/" />
+        <meta property="twitter:title" content="Wydad Athletic Club API." />
+        <meta property="twitter:description" content="" />
+        <meta property="twitter:image" content="{{ asset('assets/images/screen-shot.jpg') }}" />
     </head>
     <body>
         <main>
