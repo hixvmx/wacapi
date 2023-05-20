@@ -95,6 +95,10 @@ main {
 /* Header */
 header {
     height: 80px;
+    background: var(--bg-color-secondary);
+    position: sticky;
+    top: 0;
+    z-index: 1;
     display: flex;
     align-items: center;
     justify-content: space-between;
