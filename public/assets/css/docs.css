@@ -3,6 +3,7 @@ section {
     padding-bottom: 7rem;
     display: grid;
     grid-template-columns: 20% 80%;
+    min-width: 750px;
 }
 
 /* Aside */
