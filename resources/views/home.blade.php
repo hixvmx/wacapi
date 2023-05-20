@@ -12,9 +12,9 @@
         <a id="hashtag">#DimaWydad</a>
         <h2>Wydad Athletic Club API</h2>
         <p>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloremque iusto qui enim quibusdam aut <br/>
-            quaerat eius maiores temporibus aspernatur ad deleniti at, harum sequi magnam <br/>
-            commodi beatae sint vel magni? <br/>
+            get information about the club's championships, including league titles, cup victories, <br/>
+            and other notable achievements. Stay updated with the club's success <br/>
+            in domestic and international competitions.
         </p>
         <div id="btns">
             <a href="/docs"><button id="docs">Docs</button></a>
