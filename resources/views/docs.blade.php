@@ -33,12 +33,20 @@
 <p class="article_desciprion"></p>
 
 <div class="code">
-<pre><code>var language = '<span class="txt">en</span>'; <span class="comment">// ['ar', en]</span>
-var url      = '<span class="txt">https://wacapi.hixvm.com/api/v1/</span>' +language;
+<pre><code>import axios from '<span class="txt">axios</span>';
 
-fetch(url + '<span class="txt">/apitoken/new</span>')
-    .then(res=>res.json())
-    .then(json=>console.log(json))
+
+const language = '<span class="txt">en</span>'; <span class="comment">// ['ar', en]</span>
+
+axios.post('<span class="txt">https://wacapi.hixvm.com/api/v1/</span>'+language+'<span class="txt">/apitoken/new</span>', {
+    headers: { 'Content-Type': 'application/json' },
+})
+.then(function (response) {
+    console.log(response.data);
+})
+.catch(function (error) {
+    console.log(error);
+});
 </code></pre>
 </div>
 
@@ -61,13 +69,22 @@ fetch(url + '<span class="txt">/apitoken/new</span>')
 <p class="article_desciprion"></p>
     
 <div class="code">
-<pre><code>var language = '<span class="txt">en</span>'; <span class="comment">// ['ar', en]</span>
-var token    = '<span class="txt">your token here</span>';
-var url      = '<span class="txt">https://wacapi.hixvm.com/api/v1/</span>' +language+ '<span class="txt">/</span>' +token;
+<pre><code>import axios from '<span class="txt">axios</span>';
 
-fetch(url + '<span class="txt">/clubs/wac</span>')
-    .then(res=>res.json())
-    .then(json=>console.log(json))
+
+const language = '<span class="txt">en</span>'; <span class="comment">// ['ar', en]</span>
+const token    = '<span class="txt">your token here</span>';
+const url      = '<span class="txt">https://wacapi.hixvm.com/api/v1/</span>' +language+ '<span class="txt">/</span>' +token;
+
+axios.get(url + '<span class="txt">/clubs/wac</span>', {
+    headers: { 'Content-Type': 'application/json' },
+})
+.then(function (response) {
+    console.log(response.data);
+})
+.catch(function (error) {
+    console.log(error);
+});
 </code></pre>
 </div>
     
@@ -105,13 +122,22 @@ fetch(url + '<span class="txt">/clubs/wac</span>')
 <p class="article_desciprion"></p>
         
 <div class="code">
-<pre><code>var language = '<span class="txt">en</span>'; <span class="comment">// ['ar', en]</span>
-var token    = '<span class="txt">your token here</span>';
-var url      = '<span class="txt">https://wacapi.hixvm.com/api/v1/</span>' +language+ '<span class="txt">/</span>' +token;
+<pre><code>import axios from '<span class="txt">axios</span>';
+
+
+const language = '<span class="txt">en</span>'; <span class="comment">// ['ar', en]</span>
+const token    = '<span class="txt">your token here</span>';
+const url      = '<span class="txt">https://wacapi.hixvm.com/api/v1/</span>' +language+ '<span class="txt">/</span>' +token;
     
-fetch(url + '<span class="txt">/players</span>')
-    .then(res=>res.json())
-    .then(json=>console.log(json))
+axios.get(url + '<span class="txt">/players</span>', {
+    headers: { 'Content-Type': 'application/json' },
+})
+.then(function (response) {
+    console.log(response.data);
+})
+.catch(function (error) {
+    console.log(error);
+});
 </code></pre>
 </div>
         
@@ -153,13 +179,22 @@ fetch(url + '<span class="txt">/players</span>')
 <p class="article_desciprion"></p>
             
 <div class="code">
-<pre><code>var language = '<span class="txt">en</span>'; <span class="comment">// ['ar', en]</span>
-var token    = '<span class="txt">your token here</span>';
-var url      = '<span class="txt">https://wacapi.hixvm.com/api/v1/</span>' +language+ '<span class="txt">/</span>' +token;
+<pre><code>import axios from '<span class="txt">axios</span>';
     
-fetch(url + '<span class="txt">/player/1</span>')
-    .then(res=>res.json())
-    .then(json=>console.log(json))
+    
+const language = '<span class="txt">en</span>'; <span class="comment">// ['ar', en]</span>
+const token    = '<span class="txt">your token here</span>';
+const url      = '<span class="txt">https://wacapi.hixvm.com/api/v1/</span>' +language+ '<span class="txt">/</span>' +token;
+        
+axios.get(url + '<span class="txt">/players/1</span>', {
+    headers: { 'Content-Type': 'application/json' },
+})
+.then(function (response) {
+    console.log(response.data);
+})
+.catch(function (error) {
+    console.log(error);
+});
 </code></pre>
 </div>
             
@@ -190,14 +225,22 @@ fetch(url + '<span class="txt">/player/1</span>')
 <p class="article_desciprion"></p>
                 
 <div class="code">
-<pre><code>var language = '<span class="txt">en</span>'; <span class="comment">// ['ar', en]</span>
-var token    = '<span class="txt">your token here</span>';
-var url      = '<span class="txt">https://wacapi.hixvm.com/api/v1/</span>' +language+ '<span class="txt">/</span>' +token;
-        
-fetch(url + '<span class="txt">/championships</span>')
-    .then(res=>res.json())
-    .then(json=>console.log(json))
-</code></pre>
+<pre><code>import axios from '<span class="txt">axios</span>';
+    
+    
+const language = '<span class="txt">en</span>'; <span class="comment">// ['ar', en]</span>
+const token    = '<span class="txt">your token here</span>';
+const url      = '<span class="txt">https://wacapi.hixvm.com/api/v1/</span>' +language+ '<span class="txt">/</span>' +token;
+
+axios.get(url + '<span class="txt">/championships</span>', {
+    headers: { 'Content-Type': 'application/json' },
+})
+.then(function (response) {
+    console.log(response.data);
+})
+.catch(function (error) {
+    console.log(error);
+});
 </div>
                 
 <button class="output_btn">Show output</button>
@@ -238,13 +281,22 @@ fetch(url + '<span class="txt">/championships</span>')
 <p class="article_desciprion"></p>
                     
 <div class="code">
-<pre><code>var language = '<span class="txt">en</span>'; <span class="comment">// ['ar', en]</span>
-var token    = '<span class="txt">your token here</span>';
-var url      = '<span class="txt">https://wacapi.hixvm.com/api/v1/</span>' +language+ '<span class="txt">/</span>' +token;
-            
-fetch(url + '<span class="txt">/championship/1</span>')
-    .then(res=>res.json())
-    .then(json=>console.log(json))
+<pre><code>import axios from '<span class="txt">axios</span>';
+    
+    
+const language = '<span class="txt">en</span>'; <span class="comment">// ['ar', en]</span>
+const token    = '<span class="txt">your token here</span>';
+const url      = '<span class="txt">https://wacapi.hixvm.com/api/v1/</span>' +language+ '<span class="txt">/</span>' +token;
+    
+axios.get(url + '<span class="txt">/championships/1</span>', {
+    headers: { 'Content-Type': 'application/json' },
+})
+.then(function (response) {
+    console.log(response.data);
+})
+.catch(function (error) {
+    console.log(error);
+});
 </code></pre>
 </div>
                     
